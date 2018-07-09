@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="fixed_percent">
+        <item>Fixed</item>
+        <item>Percent</item>
+    </string-array>
+    <string-array name="State">
+        <item>Iowa</item>
+        <item>Illinois</item>
+    </string-array>
+</resources>

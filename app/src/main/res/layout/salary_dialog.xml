@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="390dp"
+    android:minWidth="320dp"
+    android:minHeight="390dp"
+    android:showDividers="middle"
+    android:id="@+id/salary_dialog">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/etGrossPay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/txtGrossPay"
+            android:layout_marginLeft="12dp"
+            android:layout_toEndOf="@+id/txtPostTax"
+            android:text="Text To Change"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txtGrossPay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text="Gross Pay:"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/grad"
+            android:layout_below="@id/etSubtotal"
+            android:layout_marginTop="10dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/grad"
+            android:layout_below="@id/etPostTax"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/txtSubtotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtDeductions"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text="After Pre-Tax:"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/etSubtotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/etGrossPay"
+            android:layout_alignTop="@+id/txtSubtotal"
+            android:layout_marginLeft="0dp"
+            android:text="Text To Change"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txtFedTax"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtSubtotal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text="Federal Tax:"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/etFedTax"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/etGrossPay"
+            android:layout_alignTop="@+id/txtFedTax"
+            android:layout_marginLeft="0dp"
+            android:text="Text To Change"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txtStateTax"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtFedTax"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text="State Tax:"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/etStateTax"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/etGrossPay"
+            android:layout_alignTop="@+id/txtStateTax"
+            android:layout_marginLeft="0dp"
+            android:text="Text To Change"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txtSS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtStateTax"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text="Social Security:"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/etSS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/etGrossPay"
+            android:layout_alignTop="@+id/txtSS"
+            android:layout_marginLeft="0dp"
+            android:text="Text To Change"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txtMedicare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtSS"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text="Medicare:"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/etMedicare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/etGrossPay"
+            android:layout_alignTop="@+id/txtMedicare"
+            android:layout_marginLeft="0dp"
+            android:text="Text To Change"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txtDeductions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtGrossPay"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text="Pre-Tax Deductions:"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/etDeductions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/etGrossPay"
+            android:layout_alignTop="@+id/txtDeductions"
+            android:layout_marginLeft="0dp"
+            android:text="Text To Change"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txtNetPay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtPostTax"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text="Net Pay:"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/etNetPay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/etGrossPay"
+            android:layout_alignTop="@+id/txtNetPay"
+            android:layout_marginLeft="0dp"
+            android:text="Text To Change"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txtPostTax"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtMedicare"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text="Post-Tax Deductions:"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/etPostTax"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/etGrossPay"
+            android:layout_alignTop="@+id/txtPostTax"
+            android:layout_marginLeft="0dp"
+            android:text="Text To Change"
+            android:textSize="18sp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dismiss"
+            android:id="@+id/btnDismiss"
+            android:layout_below="@+id/etNetPay"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</LinearLayout>
