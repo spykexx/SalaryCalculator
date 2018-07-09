@@ -25,6 +25,8 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     static Context contextOfApp;
+    PayStatement payStatement;
+    Button btnNewCalc;
 
     static ArrayList<PayStatement> listStatements = new ArrayList<>();
     @Override
@@ -32,18 +34,28 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         contextOfApp = this.getApplicationContext();
-        listStatements.add(new PayStatement(80,14, new Deductions(1)));
+        btnNewCalc = findViewById(R.id.btnNewPay);
+        //listStatements.add(new PayStatement(80,14, new Deductions(1)));
+
+        btnNewCalc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, calcNew.class);
+                startActivity(intent);
+            }
+        });
 
     }
+
     public static Context getContextOfApp(){
         return contextOfApp;
     }
     public PayStatement getPayStatement(){
         return payStatement;
     }
-    public void checkFirstRun(){
+    /*public void checkFirstRun(){
         if(sharedPreferences.getBoolean("First_Run", true)){
             sharedPreferences.edit().putBoolean("First_Run", false);
         }
-    }
+    }*/
 }

@@ -2,6 +2,7 @@ package com.example.spykexx.salarycalculator;
 
 import android.app.FragmentManager;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
@@ -65,6 +66,14 @@ public class calcNew extends AppCompatActivity {
             }else { //pass regular and overtime hours and payrate into paystatement object
                 deductions = new Deductions(1);
                 payStatement = new PayStatement(Double.parseDouble(etRegHours.getText().toString()), Double.parseDouble(etRegPay.getText().toString()), Double.parseDouble(etOTHours.getText().toString()), Double.parseDouble(etOTPay.getText().toString()), deductions);
+
+
+                sd.onDismiss(new DialogInterface.OnDismissListener() {
+                    @Override
+                    public void onDismiss(DialogInterface dialogInterface) {
+
+                    }
+                });
                 sd.show(fm, "Salary");
             }
         } else {
@@ -78,7 +87,13 @@ public class calcNew extends AppCompatActivity {
                 deductions = new Deductions(1);
                 payStatement = new PayStatement(Double.parseDouble(etRegHours.getText().toString()), Double.parseDouble(etRegPay.getText().toString()), deductions);
                 sd.show(fm, "Salary");
-
+                fm.executePendingTransactions();
+                sd.getDialog().setOnDismissListener(new DialogInterface.OnDismissListener() {
+                    @Override
+                    public void onDismiss(DialogInterface dialogInterface) {
+                        finish();
+                    }
+                });
 
             }
         }
@@ -88,7 +103,7 @@ public class calcNew extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_calc_new);
         payStatement = new PayStatement();
         sharedPreferences = getApplicationContext().getSharedPreferences("com.example.spykexx.salarycalculator", Context.MODE_PRIVATE);
         cbOT = findViewById(R.id.cbOT);

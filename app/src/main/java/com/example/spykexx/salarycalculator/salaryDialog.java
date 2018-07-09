@@ -1,5 +1,6 @@
 package com.example.spykexx.salarycalculator;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.DialogFragment;
@@ -18,10 +19,11 @@ import java.text.DecimalFormat;
  * Created by Spykexx on 6/19/2016.
  */
 public class salaryDialog extends DialogFragment implements View.OnClickListener {
+    calcNew activity;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        MainActivity activity = (MainActivity) getActivity();
+        activity = (calcNew) getActivity();
         //Double[] myData = activity.getMyData();
         DecimalFormat df = new DecimalFormat("0.00");
         View view = inflater.inflate(R.layout.salary_dialog, container, false);
@@ -59,6 +61,10 @@ public class salaryDialog extends DialogFragment implements View.OnClickListener
 
     @Override
     public void onClick(View view) {
+
+    }
+
+    public void onDismiss(DialogInterface.OnDismissListener onDismissListener) {
 
     }
 }
